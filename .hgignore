@@ -1,4 +1,4 @@
-(\~|suo)$
+(\~|nupkg|suo)$
 (bin|obj)/(Debug|Release)
 ^\.nuget
 ^packages

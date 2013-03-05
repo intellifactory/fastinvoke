@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>IntelliFactory.FastInvoke</id>
+    <version>0.0.1</version>
+    <authors>IntelliFactory</authors>
+    <owners>IntelliFactory</owners>
+    <licenseUrl>http://apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <projectUrl>http://bitbucket.org/IntelliFactory/fast-invoke</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2013 (c) IntelliFactory</copyright>
+
+    <description>Provides a faster alternative to calling `.Invoke` on `System.Reflection.MethodInfo` by separating the binding and invocation stages.</description>
+
+    <tags>F# Delegate Invocation</tags>
+    <dependencies>
+      <dependency id="FSharp.Core.3" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\IntelliFactory.FastInvoke\bin\Release\v4.0\IntelliFactory.FastInvoke.dll" target="lib\net40\" />
+    <file src="..\IntelliFactory.FastInvoke\bin\Release\v4.0\IntelliFactory.FastInvoke.xml" target="lib\net40\" />
+    <file src="..\IntelliFactory.FastInvoke\bin\Release\v2.0\IntelliFactory.FastInvoke.dll" target="lib\net20\" />
+    <file src="..\IntelliFactory.FastInvoke\bin\Release\v2.0\IntelliFactory.FastInvoke.xml" target="lib\net20\" />
+  </files>
+</package>

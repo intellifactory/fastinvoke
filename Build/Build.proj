@@ -2,6 +2,7 @@
   <PropertyGroup>
     <DownloadNuGetExe>True</DownloadNuGetExe>
     <SolutionDir>$(MSBuildThisFileDirectory)/..</SolutionDir>
+    <ProjectPath>$(SolutionDir)/Build/IntelliFactory.FastInvoke.nuspec</ProjectPath>
   </PropertyGroup>
   <Import Project="NuGet.targets" />
   <ItemGroup>
@@ -12,6 +13,7 @@
     <CallTarget Targets="RestorePackages" />
     <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v4.0' />
     <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v2.0' />
+    <CallTarget Targets="BuildPackage" />
   </Target>
   <Target Name="Clean">
     <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v4.0' Targets="Clean" />
