@@ -7,7 +7,11 @@
   <ItemGroup>
     <Projects Include="$(SolutionDir)/IntelliFactory.FastInvoke/IntelliFactory.FastInvoke.fsproj" />
   </ItemGroup>
-  <Target Name="Build" DependsOnTargets="RestorePackages">
+  <Target Name="PrepareNuGet">
+    <MakeDir Directories="$(SolutionDir)/.nuget" />
+    <CallTarget Targets="RestorePackages" />
+  </Target>
+  <Target Name="Build" DependsOnTargets="PrepareNuGet">
     <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v4.0' />
     <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v2.0' />
   </Target>
