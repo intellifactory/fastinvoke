@@ -335,7 +335,7 @@ let Compile (info: MethodInfo) : FastMethod =
     let types =
         if isAction then
             match ts.Length with
-            | 0 -> Some (typedefof<Act0>, typeof<A>)
+            | 0 -> Some (typedefof<Act0>, typedefof<A>)
             | 1 -> Some (typedefof<Act1<_>>, typedefof<A<_>>)
             | 2 -> Some (typedefof<Act2<_,_>>, typedefof<A<_,_>>)
             | 3 -> Some (typedefof<Act3<_,_,_>>, typedefof<A<_,_,_>>)
@@ -346,7 +346,7 @@ let Compile (info: MethodInfo) : FastMethod =
             | _ -> None
         else
             match ts.Length with
-            | 0 -> Some (typedefof<Func0<_>>, typeof<F<_>>)
+            | 0 -> Some (typedefof<Func0<_>>, typedefof<F<_>>)
             | 1 -> Some (typedefof<Func1<_,_>>, typedefof<F<_,_>>)
             | 2 -> Some (typedefof<Func2<_,_,_>>, typedefof<F<_,_,_>>)
             | 3 -> Some (typedefof<Func3<_,_,_,_>>, typedefof<F<_,_,_,_>>)

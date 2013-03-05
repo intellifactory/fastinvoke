@@ -2,11 +2,11 @@
 <package>
   <metadata>
     <id>IntelliFactory.FastInvoke</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <authors>IntelliFactory</authors>
     <owners>IntelliFactory</owners>
     <licenseUrl>http://apache.org/licenses/LICENSE-2.0.html</licenseUrl>
-    <projectUrl>http://bitbucket.org/IntelliFactory/fast-invoke</projectUrl>
+    <projectUrl>http://bitbucket.org/IntelliFactory/fastinvoke</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2013 (c) IntelliFactory</copyright>
 
