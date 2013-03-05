@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.FastInvoke", "..\IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj", "{3F207A0C-A38F-42D5-BDEA-D42694E7300A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.FastInvoke", "..\..\IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj", "{3F207A0C-A38F-42D5-BDEA-D42694E7300A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
