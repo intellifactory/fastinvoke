@@ -277,6 +277,8 @@ module private Implementation =
 module private CodeGen =
     open System.Reflection.Emit
 
+    type private F = delegate of obj [] -> obj
+
     let Generate (m: MethodInfo) : FastMethod =
         let r = DynamicMethod("FastInvoke:" + m.Name, typeof<obj>, [| typeof<obj[]> |], true)
         let g = r.GetILGenerator()
@@ -299,7 +301,7 @@ module private CodeGen =
         else
             g.Emit(OpCodes.Box, m.ReturnType)
             g.Emit(OpCodes.Ret)
-        let d = r.CreateDelegate(typeof<Func<obj[],obj>>) :?> Func<obj[],obj>
+        let d = r.CreateDelegate(typeof<F>) :?> F
         {
             new FastMethod() with
                 override this.InvokeN(ps) = d.Invoke(ps)
@@ -315,7 +317,7 @@ let Compile (info: MethodInfo) : FastMethod =
                 yield p.ParameterType
         |]
     let r = info.ReturnType
-    let isAction = r = typeof<Void> || r = typeof<unit>
+    let isAction = r = typeof<Void>
     let types =
         if isAction then
             match ts.Length with

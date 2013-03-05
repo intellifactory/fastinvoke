@@ -1,0 +1,18 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <DownloadNuGetExe>True</DownloadNuGetExe>
+    <SolutionDir>$(MSBuildThisFileDirectory)</SolutionDir>
+  </PropertyGroup>
+  <Import Project="Build/NuGet.targets" />
+  <ItemGroup>
+    <Projects Include="IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj" />
+  </ItemGroup>
+  <Target Name="Build" DependsOnTargets="RestorePackages">
+    <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v4.0' />
+    <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v2.0' />
+  </Target>
+  <Target Name="Clean">
+    <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v4.0' Targets="Clean" />
+    <MSBuild Projects="@(Projects)" Properties='Configuration=Release;Framework=v2.0' Targets="Clean" />
+  </Target>
+</Project>

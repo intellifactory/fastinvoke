@@ -1,0 +1,36 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FSharpHome1>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0</FSharpHome1>
+    <FSharpHome2>$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\</FSharpHome2>
+    <FSharpHome3>$(MSBuildExtensionsPath32)\FSharp\1.0</FSharpHome3>
+    <FSharpHome Condition="Exists('$(FSharpHome1)') AND '$(FSharpHome)' == ''">$(FSharpHome1)</FSharpHome>
+    <FSharpHome Condition="Exists('$(FSharpHome2)') AND '$(FSharpHome)' == ''">$(FSharpHome2)</FSharpHome>
+    <FSharpHome Condition="Exists('$(FSharpHome3)') AND '$(FSharpHome)' == ''">$(FSharpHome3)</FSharpHome>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition=" '$(Framework)' == '' ">v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" '$(Framework)' == 'v4.0' ">v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" '$(Framework)' == 'v2.0' ">v2.0</TargetFrameworkVersion>
+    <V4 Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">True</V4>
+    <V4 Condition=" '$(TargetFrameworkVersion)' != 'v4.0' ">False</V4>
+    <KeyOriginatorFile Condition="Exists('$(INTELLIFACTORY)/keys/IntelliFactory.snk')">$(INTELLIFACTORY)/keys/IntelliFactory.snk</KeyOriginatorFile>
+  </PropertyGroup>
+  <ItemGroup Condition="$(V4)">    
+    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+      <HintPath>$(SolutionDir)/packages/FSharp.Core.3.0.0.2/lib/net40/FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup Condition="!$(V4)">
+    <Reference Include="FSharp.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+      <HintPath>$(SolutionDir)/packages/FSharp.Core.3.0.0.2/lib/net20/FSharp.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+  </ItemGroup>
+</Project>
