@@ -1,4 +1,5 @@
 (\~|nupkg|suo)$
 (bin|obj)/(Debug|Release)
+^\.build
 ^\.nuget
-^packages
+^packages/

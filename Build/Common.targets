@@ -15,7 +15,7 @@
     <V4 Condition=" '$(TargetFrameworkVersion)' != 'v4.0' ">False</V4>
     <KeyOriginatorFile Condition="Exists('$(INTELLIFACTORY)/keys/IntelliFactory.snk')">$(INTELLIFACTORY)/keys/IntelliFactory.snk</KeyOriginatorFile>
   </PropertyGroup>
-  <ItemGroup Condition="$(V4)">    
+  <ItemGroup Condition="$(V4)">
     <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
       <HintPath>$(SolutionDir)/packages/FSharp.Core.3.0.0.2/lib/net40/FSharp.Core.dll</HintPath>
@@ -24,7 +24,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup Condition="!$(V4)">
-    <Reference Include="FSharp.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <Reference Include="FSharp.Core, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
       <HintPath>$(SolutionDir)/packages/FSharp.Core.3.0.0.2/lib/net20/FSharp.Core.dll</HintPath>
     </Reference>
@@ -32,5 +32,8 @@
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)/../.build/AutoAssemblyInfo.fs" />
   </ItemGroup>
 </Project>

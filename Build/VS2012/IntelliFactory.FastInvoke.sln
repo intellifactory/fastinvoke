@@ -3,6 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.FastInvoke", "..\..\IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj", "{3F207A0C-A38F-42D5-BDEA-D42694E7300A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{82289CCE-0760-445D-8961-565D8894BC49}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Build.fsx = ..\..\Build.fsx
+		..\..\Build.proj = ..\..\Build.proj
+		..\..\LICENSE.txt = ..\..\LICENSE.txt
+		..\..\packages.config = ..\..\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{D29752C2-3B8F-4794-95E5-007A763A47F1}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build.proj = ..\Build.proj
+		..\Common.targets = ..\Common.targets
+		..\IntelliFactory.FastInvoke.nuspec = ..\IntelliFactory.FastInvoke.nuspec
+		..\NuGet.targets = ..\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
