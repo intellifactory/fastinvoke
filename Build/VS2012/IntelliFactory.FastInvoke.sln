@@ -6,17 +6,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{82289CCE-0760-445D-8961-565D8894BC49}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Build.fsx = ..\..\Build.fsx
-		..\..\Build.proj = ..\..\Build.proj
 		..\..\LICENSE.txt = ..\..\LICENSE.txt
 		..\..\packages.config = ..\..\packages.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{D29752C2-3B8F-4794-95E5-007A763A47F1}"
 	ProjectSection(SolutionItems) = preProject
-		..\Build.proj = ..\Build.proj
-		..\Common.targets = ..\Common.targets
 		..\IntelliFactory.FastInvoke.nuspec = ..\IntelliFactory.FastInvoke.nuspec
-		..\NuGet.targets = ..\NuGet.targets
 	EndProjectSection
 EndProject
 Global
@@ -25,10 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.ActiveCfg = Debug-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.Build.0 = Debug-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.ActiveCfg = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.Build.0 = Release-v4.0|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
