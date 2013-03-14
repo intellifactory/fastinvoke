@@ -29,3 +29,4 @@ Target "Clean" Solution.Clean
 match Environment.GetCommandLineArgs() with
 | xs when xs.[xs.Length - 1] = "Clean" -> RunTargetOrDefault "Clean"
 | _ -> RunTargetOrDefault "Build"
+
