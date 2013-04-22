@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.FastInvoke", "..\..\IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj", "{3F207A0C-A38F-42D5-BDEA-D42694E7300A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.FastInvoke", "IntelliFactory.FastInvoke\IntelliFactory.FastInvoke.fsproj", "{3F207A0C-A38F-42D5-BDEA-D42694E7300A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{0AA0E6D0-2E87-4917-B118-B96EF9B6220B}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +14,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.ActiveCfg = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.Build.0 = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.ActiveCfg = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.Build.0 = Release-v4.0|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
