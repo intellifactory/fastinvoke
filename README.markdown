@@ -20,7 +20,7 @@ mirror](http://github.com/intellifactory/fastinvoke).
 
 ## Building
 
-Invoke `MSBuild.exe` in the root directory of the checkout.
+Invoke `Build.cmd` in the root directory of the checkout.
 
 ## Documentation
 
