@@ -4,6 +4,7 @@
     <ProjectGuid>3f207a0c-a38f-42d5-bdea-d42694e7300a</ProjectGuid>
     <OutputType>Library</OutputType>
     <Name>IntelliFactory.FastInvoke</Name>
+    <KeyOriginatorFile Condition="Exists('$(INTELLIFACTORY)/keys/IntelliFactory.snk')">$(INTELLIFACTORY)/keys/IntelliFactory.snk</KeyOriginatorFile>
   </PropertyGroup>
   <Import Project="../.build/FSharp.targets" />
   <ItemGroup>
