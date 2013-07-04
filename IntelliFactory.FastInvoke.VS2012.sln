@@ -10,14 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{0AA0E6D0-2
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Release-v4.0|Any CPU = Release-v4.0|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.ActiveCfg = Release-v4.0|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Debug|Any CPU.Build.0 = Release-v4.0|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.ActiveCfg = Release-v4.0|Any CPU
-		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release|Any CPU.Build.0 = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release-v4.0|Any CPU.ActiveCfg = Release-v4.0|Any CPU
+		{3F207A0C-A38F-42D5-BDEA-D42694E7300A}.Release-v4.0|Any CPU.Build.0 = Release-v4.0|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

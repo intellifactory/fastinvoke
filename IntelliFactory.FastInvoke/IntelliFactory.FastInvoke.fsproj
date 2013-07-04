@@ -6,6 +6,7 @@
     <OutputType>Library</OutputType>
     <Name>IntelliFactory.FastInvoke</Name>
     <KeyOriginatorFile Condition="Exists('$(INTELLIFACTORY)/keys/IntelliFactory.snk')">$(INTELLIFACTORY)/keys/IntelliFactory.snk</KeyOriginatorFile>
+    <DefineConstants Condition=" '$(Configuration)' == 'Release-v4.0' ">SECURITY</DefineConstants>
   </PropertyGroup>
   <Import Project="../.build/FSharp.targets" />
   <ItemGroup>
